@@ -240,15 +240,20 @@ nav h1 {
   margin-inline: 0.3rem;
 }
 
+#menu{
+  display: none;
+}
+
 @media (max-width: 480px) {
   .section_one,
   .testimonials {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
+    margin-top: 1rem;
   }
 
   nav h1{
-    font-size: 2.5rem;
+    font-size: 2rem;
   }
 
   nav ul > li {
@@ -256,6 +261,9 @@ nav h1 {
     display: none;
   }
 
+  #menu{
+    display: block;
+  }
   .headerContent{
     margin-top: 17rem;
   }
@@ -279,5 +287,21 @@ nav h1 {
   .sectiontwo{
     display: grid;
     grid-template-columns: repeat(2,1fr);
+  }
+
+  .testimonialcontainer h1{
+    font-size: x-large;
+  }
+
+}
+
+@media (min-width:480px) and (max-width:800px){
+  nav ul > li {
+    
+    display: none;
+  }
+
+  #menu{
+    display: block;
   }
 }

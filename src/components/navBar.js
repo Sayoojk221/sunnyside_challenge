@@ -19,6 +19,7 @@ function Navabr() {
             <a href="#" id="contactBtn">contact</a>
           </li>
         </ul>
+        <img src="/images/icons8-menu.svg" id='menu'/>
       </nav>
     </div>
   );
