@@ -15,10 +15,9 @@ a {
   text-decoration: none;
 }
 
-.main{
+/* .main{
   width: fit-content;
-
-}
+} */
 
 .header {
   min-height: 40rem;
@@ -83,13 +82,13 @@ nav h1 {
   align-items: center;
   flex-direction: column;
   margin-top: 10rem;
+  margin-inline: 2rem;
 }
 
 .headerContent h2 {
-  font-size: 5rem;
+  font-size: 4rem;
   color: var(--link-color);
   text-align: center;
-  flex-grow: 1;
 }
 
 .headerContent img {
@@ -149,68 +148,66 @@ nav h1 {
   font-size: 15px;
 }
 
-.testimonialcontainer{
-  min-height: 30rem;  
+.testimonialcontainer {
+  min-height: 30rem;
 }
 
-.testimonialcontainer h1{
+.testimonialcontainer h1 {
   text-align: center;
   padding-top: 3rem;
   text-transform: uppercase;
   color: lightslategray;
 }
 
-.testimonials{
+.testimonials {
   display: grid;
-  grid-template-columns: repeat(3,1fr);
+  grid-template-columns: repeat(3, 1fr);
   margin-top: 6rem;
 }
 
-.testiCard{
+.testiCard {
   display: flex;
   flex-direction: column;
-  margin-inline:3rem;
+  margin: 3rem;
   align-items: center;
 }
 
-.testiCard img{
+.testiCard img {
   width: 80px;
   height: 80px;
   border-radius: 80px;
   margin-bottom: 1.5rem;
 }
 
-.testiCard p{
+.testiCard p {
   text-align: center;
   margin-bottom: 1.5rem;
   line-height: 25px;
   color: #848391;
 }
 
-.testiCard h5{
+.testiCard h5 {
   margin-bottom: 10px;
   font-size: 28px;
 }
 
-.testiCard h6{
+.testiCard h6 {
   font-size: 17px;
   color: #829494;
 }
 
-.sectiontwo{
+.sectiontwo {
   display: grid;
-  grid-template-columns: repeat(4,1fr);
+  grid-template-columns: repeat(4, 1fr);
   padding-top: 2rem;
-
 }
 
-.footer{
+.footer {
   min-height: 15rem;
   background-color: #589688;
   display: flex;
   justify-content: center;
   align-items: center;
-  
 }
 
 .footerContent {
@@ -219,7 +216,7 @@ nav h1 {
   align-items: center;
 }
 
-.footerContent h1{
+.footerContent h1 {
   font-size: xx-large;
   color: white;
   text-transform: lowercase;
@@ -230,7 +227,7 @@ nav h1 {
   display: flex;
 }
 
-#footerLinks li{
+#footerLinks li {
   margin-inline: 1rem;
   margin-block: 2rem;
   color: #24554a;
@@ -239,8 +236,48 @@ nav h1 {
   cursor: pointer;
 }
 
-#socialmedias li{
+#socialmedias li {
   margin-inline: 0.3rem;
 }
 
+@media (max-width: 480px) {
+  .section_one,
+  .testimonials {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+  }
 
+  nav h1{
+    font-size: 2.5rem;
+  }
+
+  nav ul > li {
+    
+    display: none;
+  }
+
+  .headerContent{
+    margin-top: 17rem;
+  }
+
+  .headerContent h2 {
+    font-size: 3rem;
+  }
+
+  .headerContent img {
+    margin-top: 2rem;
+  }
+
+  .cardwithlink,.cardwithoutlink {
+    margin-inline: 25px;
+  }
+
+  .cardwithlink h2{
+    font-size: x-large;
+  }
+
+  .sectiontwo{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+  }
+}
