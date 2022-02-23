@@ -1,10 +1,10 @@
 import React from 'react'
 import Navabr from './navBar'
 
-function Header() {
+function Header({setOpen}) {
   return (
     <div className='header'>
-        <Navabr />
+        <Navabr setOpen={setOpen} />
         <div className='headerContent'>
           <h2>WE ARE CREATIVES</h2>
           <img src='https://i.ibb.co/MSv2H70/arrow.png'  />

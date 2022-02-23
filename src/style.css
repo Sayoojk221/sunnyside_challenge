@@ -4,6 +4,10 @@
   font-family: Arial, Helvetica, sans-serif;
 }
 
+body {
+  scroll-behavior: smooth !important;
+}
+
 :root {
   --primary: rgb(37, 150, 190);
   --link-color: white;
@@ -240,8 +244,53 @@ nav h1 {
   margin-inline: 0.3rem;
 }
 
-#menu{
+#menu {
   display: none;
+}
+
+.modal-window {
+  position: fixed;
+  background-color: rgba(255, 255, 255, 0.25);
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 999;
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s;
+}
+
+.modal-window div {
+  width: 214px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 2em;
+  background: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 25px;
+}
+
+#modelClose{
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 10px;
+}
+.modal-window ul {
+  list-style-type: none;
+}
+
+.modal-window ul li {
+  margin-block: 1.5rem;
+  font-size: large;
+  text-transform: capitalize;
+  text-align: center;
 }
 
 @media (max-width: 480px) {
@@ -252,19 +301,11 @@ nav h1 {
     margin-top: 1rem;
   }
 
-  nav h1{
+  nav h1 {
     font-size: 2rem;
   }
 
-  nav ul > li {
-    
-    display: none;
-  }
-
-  #menu{
-    display: block;
-  }
-  .headerContent{
+  .headerContent {
     margin-top: 17rem;
   }
 
@@ -276,32 +317,40 @@ nav h1 {
     margin-top: 2rem;
   }
 
-  .cardwithlink,.cardwithoutlink {
+  .cardwithlink,
+  .cardwithoutlink {
     margin-inline: 25px;
   }
 
-  .cardwithlink h2{
+  .cardwithlink h2 {
     font-size: x-large;
   }
 
-  .sectiontwo{
+  .sectiontwo {
     display: grid;
-    grid-template-columns: repeat(2,1fr);
+    grid-template-columns: repeat(2, 1fr);
   }
 
-  .testimonialcontainer h1{
+  .testimonialcontainer h1 {
     font-size: x-large;
   }
 
+  #contactBtn{
+    padding-inline: 0;
+  }
+
+  #contactBtn:hover{
+    background-color: white;
+    transition-duration: 0.5s;
+  }
 }
 
-@media (min-width:480px) and (max-width:800px){
+@media (max-width: 800px) {
   nav ul > li {
-    
     display: none;
   }
 
-  #menu{
+  #menu {
     display: block;
   }
 }

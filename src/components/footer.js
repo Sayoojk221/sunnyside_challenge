@@ -7,8 +7,8 @@ const Footer = () => {
             <h1>Sunnyside</h1>
             <ul id='footerLinks'>
                 <li>about</li>
-                <li>services</li>
-                <li>projects</li>
+                <li>testimonials</li>
+                <li>gallery</li>
             </ul>
             <ul id='socialmedias'>
                 <li>

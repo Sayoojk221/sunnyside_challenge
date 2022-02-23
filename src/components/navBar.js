@@ -1,26 +1,27 @@
 import React from "react";
 
-function Navabr() {
+function Navabr({setOpen}) {
   return (
     <div className="navbar">
       <nav>
         <h1>sunnyside</h1>
         <ul className="navlinks">
           <li>
-            <a href="#">about</a>
+            <a href="#about">about</a>
           </li>
           <li>
-            <a href="#">services</a>
+            <a href="#testimonials">testimonials</a>
           </li>
           <li>
-            <a href="#">projects</a>
+            <a href="#gallery">gallery</a>
           </li>
           <li >
             <a href="#" id="contactBtn">contact</a>
           </li>
         </ul>
-        <img src="/images/icons8-menu.svg" id='menu'/>
+        <a href="#" id='menu' onClick={()=>setOpen(true)}><img src="/images/icons8-menu.svg" /></a>
       </nav>
+      
     </div>
   );
 }
